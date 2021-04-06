@@ -23,7 +23,7 @@ mtd8
 刷入命令自 v260 被锁定
 降级至 246 或更低
 [HxD](https://mh-nexus.de/en/downloads.php?product=HxD20)
-复制备份的mtd0的 `0x400` ~ `0xF9F`(**直到遇见`0x13FC`之前的大片`00`**)，替换至目标cfe的相同偏移
+复制备份的mtd0的 `0x400` ~ `0xF9F`(**直到遇见`0x13FC`之前的大片`00`**)，替换至目标cfe的相同位置
 使用[broadcom_cfe_tool](https://github.com/corberan/broadcom_cfe_tool) 验证修改
 192.168.2.x 225.225.225.0
 [Tftpd](https://tftpd32.jounin.net/tftpd32_download.html)
