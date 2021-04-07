@@ -2,7 +2,7 @@
 # K3N
 Phicomm K3 D1
 ## Telnet
-Original Version: V23.1.8.89  
+Preinsatlled firmware version: V23.1.8.89  
 For China: [cn.dat](https://tbvv.net/k3/cn.dat), for worldwide: [us.dat](https://tbvv.net/k3/us.dat) / [de.dat](https://tbvv.net/k3/de.dat)  
 192.168.2.1>Advanced>Restore>Configuration File>Browse>xx.dat>Restore Configuration, One restore one season, reboot router will lose telnet.  
 [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)>192.168.2.1>Telnet>Open>Entry`Command` 
@@ -26,7 +26,7 @@ mtd8
 ## cfe
 Flash command has been blocked since v260  
 Downgrade to 246 or lower  
-[HxD](https://mh-nexus.de/en/downloads.php?product=HxD20) 
+[HxD](https://mh-nexus.de/en/downloads.php?product=HxD20)  
 Copy `0x400` ~ `0xF9F`(**meet plenty of `00` before `0x13FC`**) from origianl mtd0, replace the same area of target cfe  
 Verify your work using  [broadcom_cfe_tool](https://github.com/corberan/broadcom_cfe_tool)  
 192.168.2.x 225.225.225.0  
@@ -42,7 +42,7 @@ Linux:
 `sudo apt-get update`  
 `binwalk xxx.bin`  
 
-- CAN be flashed through cfe: 
+- CAN be flashed via cfe: 
 
 DECIMAL | HEXADECIMAL | DESCRIPTION
 ------- | ----------- | -----------
@@ -50,7 +50,7 @@ DECIMAL | HEXADECIMAL | DESCRIPTION
 28 | 0x1C | LZMA compressed data, xxx
 2220612 | 0x21E244 | Squashfs filesystem, xxx
 
-- CAN NOT be flashed through cfe, there are some data before TRX,LZMA&Squashfs: 
+- CAN NOT be flashed via cfe, there are some data before TRX,LZMA&Squashfs: 
 
 DECIMAL | HEXADECIMAL | DESCRIPTION
 ------- | ----------- | -----------
@@ -59,10 +59,10 @@ DECIMAL | HEXADECIMAL | DESCRIPTION
 525340 | 0x8041C | LZMA compressed data, xxx
 2775712 | 0x2A5AA0 | Squashfs filesystem, xxx, size: 32877312 bytes, xxx
 
-Get the part(same as mtd6) that can be flashed through cfe:  
+Get the part(same as mtd6) that can be flashed via cfe:  
 `dd if=Original.bin of=New.bin bs=1 skip=525312 count=35127712`  
-**525312 :** `TRX firmware header start`  
-**35127712 :** `Squashfsfilesystem start` + `Squashfs filesystem size` - `TRX firmware header start` eg.(2775712+32877312-525312)  
+**525312 :** `TRX firmware header offset`  
+**35127712 :** `Squashfsfilesystem offset` + `Squashfs filesystem size` - `TRX firmware header offset` eg.(2775712+32877312-525312)  
 # cfe flash
 `192.168.2.100` 225.225.225.0  
 `ping 192.168.2.1` hold Reset for 10s, wait for ttl=100  
