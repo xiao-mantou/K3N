@@ -1,6 +1,6 @@
 ###### [中文](https://github.com/xiao-mantou/K3N/blob/main/README-zh.md)
 # K3N
-K3 D1
+Phicomm K3 D1
 ## Telnet
 Original Version: V23.1.8.89  
 For China: [cn.dat](https://tbvv.net/k3/cn.dat), for worldwide: [us.dat](https://tbvv.net/k3/us.dat) / [de.dat](https://tbvv.net/k3/de.dat)  

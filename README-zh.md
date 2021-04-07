@@ -1,5 +1,5 @@
 # K3N
-K3 D1
+斐讯 K3 D1
 ## Telnet
 预装固件: V23.1.8.89  
 [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)  
