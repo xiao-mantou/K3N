@@ -4,7 +4,7 @@ K3 D1
 ## Telnet
 Original Version: V23.1.8.89 
 For China: [cn.dat](https://tbvv.net/k3/cn.dat), for worldwide: [us.dat](https://tbvv.net/k3/us.dat) / [de.dat](https://tbvv.net/k3/de.dat) 
-192.168.2.1>Advanced>Restore>Configuration File>Browse>xx.dat>Restore Configuration, One restore one season, reboot router will lost telnet 
+192.168.2.1>Advanced>Restore>Configuration File>Browse>xx.dat>Restore Configuration, One restore one season, reboot router will lose telnet. 
 [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)>192.168.2.1>Telnet>Open>Entry`Command` 
 
 [Source](https://tbvv.net/posts/0101-k3.html#%E5%88%B7%E5%85%A5root%E5%9B%BA%E4%BB%B6)
