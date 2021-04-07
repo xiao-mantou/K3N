@@ -46,7 +46,7 @@ DECIMAL | HEXADECIMAL | DESCRIPTION
 28 | 0x1C | LZMA compressed data, xxx
 2220612 | 0x21E244 | Squashfs filesystem, xxx
 
-- 不可以使用cfe刷入的固件，在TRX,LZMA和Squashfs之前有数据:
+- 不可以使用cfe刷入的固件，在TRX,LZMA和Squashfs之前有额外数据:
 
 DECIMAL | HEXADECIMAL | DESCRIPTION
 ------- | ----------- | -----------

@@ -50,7 +50,7 @@ DECIMAL | HEXADECIMAL | DESCRIPTION
 28 | 0x1C | LZMA compressed data, xxx
 2220612 | 0x21E244 | Squashfs filesystem, xxx
 
-- CAN NOT be flashed through cfe, has some data before TRX,LZMA&Squashfs: 
+- CAN NOT be flashed through cfe, there are some data before TRX,LZMA&Squashfs: 
 
 DECIMAL | HEXADECIMAL | DESCRIPTION
 ------- | ----------- | -----------
