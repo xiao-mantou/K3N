@@ -27,7 +27,7 @@ mtd8
 Flash command has been blocked since v260  
 Downgrade to 246 or lower  
 [HxD](https://mh-nexus.de/en/downloads.php?product=HxD20) 
-Copy `0x400` ~ `0xF9F`(**meet plenty of `00` before `0x13FC`**) from origianl mtd0, replace the same offset in target cfe  
+Copy `0x400` ~ `0xF9F`(**meet plenty of `00` before `0x13FC`**) from origianl mtd0, replace the same area of target cfe  
 Verify your work using  [broadcom_cfe_tool](https://github.com/corberan/broadcom_cfe_tool)  
 192.168.2.x 225.225.225.0  
 [Tftpd](https://tftpd32.jounin.net/tftpd32_download.html)  
