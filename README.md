@@ -46,7 +46,7 @@ Linux:
 
 DECIMAL | HEXADECIMAL | DESCRIPTION
 ------- | ----------- | -----------
-0 | 0x0 | TRX firmware header, xxx
+0 | 0x0 | TRX firmware header, xxx, header size: 28 bytes, loader offset: 0x1C, linux kernel offset: 0x21E244, xxx
 28 | 0x1C | LZMA compressed data, xxx
 2220612 | 0x21E244 | Squashfs filesystem, xxx
 
@@ -63,6 +63,7 @@ Get the part(same as mtd6) that can be flashed via cfe:
 `dd if=Original.bin of=New.bin bs=1 skip=525312 count=35127712`  
 **525312 :** `TRX firmware header offset`  
 **35127712 :** `Squashfsfilesystem offset` + `Squashfs filesystem size` - `TRX firmware header offset` eg.(2775712+32877312-525312)  
+Verify: header size = LZMA offset, loader offset = LZMA offset, linux kernel offset = Squashfs offset.  
 # cfe flash
 `192.168.2.100` 225.225.225.0  
 `ping 192.168.2.1` hold Reset for 10s, wait for ttl=100  
